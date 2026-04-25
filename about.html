@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mustafa Kılıç — Portfolio | KFIGURES</title>
+<meta name="description" content="Kondor Mustafa Kılıç — Maker, embedded systems developer, and AI-driven creator. The mind behind KFIGURES.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+/* ── Portfolio-Specific Styles ─────────────────────────────── */
+
+/* Hero */
+.portfolio-hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: var(--space-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 40%, rgba(29, 158, 117, 0.06) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 25%, rgba(232, 224, 204, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(29, 158, 117, 0.03) 0%, transparent 50%);
+}
+
+.portfolio-hero-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-mid), transparent);
+}
+
+/* Animated grain texture on hero */
+.portfolio-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.015'/%3E%3C/svg%3E");
+  background-size: 200px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.portfolio-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 12rem;
+}
+
+.portfolio-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.portfolio-title-word {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 12vw, 12rem);
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  display: block;
+}
+
+.portfolio-title-word.accent {
+  color: var(--accent);
+  font-style: normal;
+  transform: skewX(-4deg);
+  display: inline-block;
+}
+
+.portfolio-title-word.green-accent {
+  color: #1D9E75;
+  font-style: normal;
+  display: inline-block;
+}
+
+.portfolio-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--white-dim);
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.portfolio-subtitle::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 1px;
+  background: rgba(29, 158, 117, 0.6);
+}
+
+/* ── Bio Box ───────────────────────────────────────────────── */
+.bio-section {
+  padding: var(--space-lg) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.bio-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.bio-vert-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, #1D9E75, transparent);
+}
+
+.bio-content {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1.65;
+  color: var(--white-dim);
+  max-width: 640px;
+  border-left: 2px solid #1D9E75;
+  padding-left: 2rem;
+}
+
+.bio-content strong {
+  color: var(--white);
+  font-weight: 400;
+}
+
+/* ── Skills ────────────────────────────────────────────────── */
+.skills-section {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.skills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2rem;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  transition: all 0.35s var(--ease-out);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-pill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(29, 158, 117, 0.12) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.skill-pill:hover {
+  border-color: rgba(29, 158, 117, 0.5);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(29, 158, 117, 0.1);
+}
+
+.skill-pill:hover::before {
+  opacity: 1;
+}
+
+.skill-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #1D9E75;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* ── Project Cards ─────────────────────────────────────────── */
+.projects-section {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.cat-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white-dim);
+  margin: 2.5rem 0 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cat-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.cat-label:first-child { margin-top: 0; }
+
+.project-card {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(29, 158, 117, 0.06) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.project-card:hover {
+  border-color: rgba(29, 158, 117, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.project-card-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  flex: 1;
+  min-width: 180px;
+}
+
+.project-chevron {
+  font-size: 11px;
+  color: var(--white-dim);
+  transition: transform 0.35s var(--ease-out), color 0.35s;
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+}
+
+.project-card.open .project-chevron {
+  transform: rotate(180deg);
+  color: #1D9E75;
+}
+
+.project-card-inner {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s var(--ease-out), margin-top 0.4s;
+}
+
+.project-card.open .project-card-inner {
+  grid-template-rows: 1fr;
+  margin-top: 12px;
+}
+
+.project-card-inner-content {
+  overflow: hidden;
+}
+
+.project-card-inner-text {
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--white-dim);
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+/* Tags */
+.project-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 3px;
+  margin: 2px 4px 2px 0;
+  position: relative;
+}
+
+.tag-teal   { background: rgba(29, 158, 117, 0.15); color: #5CE0B5; border: 1px solid rgba(29, 158, 117, 0.2); }
+.tag-amber  { background: rgba(250, 199, 117, 0.1); color: #FAC775; border: 1px solid rgba(250, 199, 117, 0.15); }
+.tag-blue   { background: rgba(100, 180, 255, 0.1); color: #90C8FF; border: 1px solid rgba(100, 180, 255, 0.15); }
+.tag-purple { background: rgba(160, 130, 255, 0.1); color: #C4B5FD; border: 1px solid rgba(160, 130, 255, 0.15); }
+.tag-coral  { background: rgba(245, 130, 100, 0.1); color: #F5A68A; border: 1px solid rgba(245, 130, 100, 0.15); }
+.tag-green  { background: rgba(120, 200, 80, 0.1);  color: #A8E06B; border: 1px solid rgba(120, 200, 80, 0.15); }
+
+/* ── Future / "What's Next" ────────────────────────────────── */
+.future-section {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.future-card {
+  position: relative;
+  background: var(--surface);
+  border: 1px dashed rgba(29, 158, 117, 0.25);
+  border-radius: var(--radius-md);
+  padding: 2rem 2.5rem;
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s var(--ease-out);
+}
+
+.future-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #1D9E75, transparent);
+  opacity: 0.6;
+}
+
+.future-card:hover {
+  border-color: rgba(29, 158, 117, 0.5);
+  transform: translateY(-2px);
+}
+
+.future-card-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.future-card-desc {
+  font-size: 0.9rem;
+  color: var(--white-dim);
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.future-card-tags {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ── Contact CTA (reused from about) ──────────────────────── */
+.portfolio-cta {
+  padding: var(--space-xl) 0;
+}
+
+.portfolio-cta-inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.portfolio-cta-text .label-tag {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.portfolio-cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 7rem);
+  letter-spacing: 0.02em;
+  line-height: 0.9;
+  color: var(--white);
+}
+
+.portfolio-cta-title em {
+  color: #1D9E75;
+  font-style: italic;
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .portfolio-hero-content { padding-top: 10rem; }
+  .portfolio-title-word { font-size: clamp(3rem, 16vw, 8rem); }
+  .bio-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .bio-label { flex-direction: row; align-items: center; }
+  .bio-vert-line { display: none; }
+  .bio-content { padding-left: 1.5rem; }
+  .project-card { padding: 1.25rem 1.5rem; }
+  .future-card { padding: 1.5rem 1.75rem; }
+  .portfolio-cta-inner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 600px) {
+  .portfolio-hero-content { padding-top: 8rem; }
+  .project-card-title { font-size: 1.1rem; }
+  .bio-content { padding-left: 1rem; font-size: 1rem; }
+  .skills-cloud { gap: 6px; }
+  .skill-pill { padding: 0.4rem 1rem; font-size: 0.6rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <nav class="nav">
+    <a href="index.html" class="logo">KFIGURES</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="product.html" class="nav-link">Product</a></li>
+      <li><a href="about.html" class="nav-link active">About</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html" class="mobile-link">Home</a></li>
+    <li><a href="product.html" class="mobile-link">Product</a></li>
+    <li><a href="about.html" class="mobile-link">About</a></li>
+  </ul>
+</div>
+
+<main>
+
+  <!-- Portfolio Hero -->
+  <section class="portfolio-hero" id="portfolio-hero">
+    <div class="portfolio-hero-bg"></div>
+    <div class="container">
+      <div class="portfolio-hero-content">
+        <div class="about-eyebrow reveal-up">
+          <span class="mono label-tag">003 / THE MAKER</span>
+        </div>
+        <h1 class="portfolio-title">
+          <span class="portfolio-title-word reveal-up" style="--delay: 0.1s">Kondor</span>
+          <span class="portfolio-title-word reveal-up" style="--delay: 0.25s">Mustafa</span>
+          <span class="portfolio-title-word green-accent reveal-up" style="--delay: 0.4s">Kılıç.</span>
+        </h1>
+        <p class="portfolio-subtitle reveal-up" style="--delay: 0.55s">Maker · Embedded Systems · AI</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio -->
+  <section class="bio-section">
+    <div class="container">
+      <div class="bio-grid">
+        <div class="bio-label reveal-up">
+          <div class="bio-vert-line"></div>
+          <span class="mono label-tag">BIO</span>
+        </div>
+        <div class="bio-content reveal-up" style="--delay: 0.1s">
+          I'm a <strong>maker and embedded systems developer</strong> who builds at the intersection of hardware, software, and AI. From IoT systems that respond to your phone to AI-powered 3D printing workflows — most of what I make is built in collaboration with AI tools. Currently expanding into <strong>game development</strong> and deepening my automation work.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills & Tools -->
+  <section class="skills-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="mono label-tag">004 / TOOLKIT</span>
+        <h2 class="section-title">Skills & tools.</h2>
+      </div>
+
+      <div class="skills-cloud">
+        <span class="skill-pill reveal-up" style="--delay: 0s"><span class="skill-dot"></span>Arduino</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.03s"><span class="skill-dot"></span>ESP32</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.06s"><span class="skill-dot"></span>Python</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.09s"><span class="skill-dot"></span>Unity</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.12s"><span class="skill-dot"></span>AI Tools</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.15s"><span class="skill-dot"></span>3D Printing</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.18s"><span class="skill-dot"></span>Image Generation</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.21s"><span class="skill-dot"></span>3D Generation</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.24s"><span class="skill-dot"></span>Video Editing</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.27s"><span class="skill-dot"></span>Telegram Bot API</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.30s"><span class="skill-dot"></span>Bluetooth / WiFi</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.33s"><span class="skill-dot"></span>ESP32-CAM</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.36s"><span class="skill-dot"></span>Web Servers</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.39s"><span class="skill-dot"></span>OBS Integration</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.42s"><span class="skill-dot"></span>Home Automation</span>
+        <span class="skill-pill reveal-up" style="--delay: 0.45s"><span class="skill-dot"></span>Robotics</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Completed Projects -->
+  <section class="projects-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="mono label-tag">005 / WORK</span>
+        <h2 class="section-title">Completed projects.</h2>
+      </div>
+
+      <p class="cat-label reveal-up">IoT & Remote Control</p>
+
+      <div class="project-card reveal-up" style="--delay: 0s" id="project-telegram-pc">
+        <div class="project-card-header">
+          <span class="project-card-title">ESP32 Telegram PC Wake System</span>
+          <span class="project-tag tag-teal">ESP32</span>
+          <span class="project-tag tag-blue">Telegram</span>
+          <span class="project-chevron">▼</span>
+        </div>
+        <div class="project-card-inner">
+          <div class="project-card-inner-content">
+            <div class="project-card-inner-text">
+              A remote PC power-on system triggered by a Telegram message. The ESP32 listens for the "/on" command sent to a Telegram bot — when it receives it, it wakes up the connected PC. No need to be home.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" style="--delay: 0.06s" id="project-robot-vehicle">
+        <div class="project-card-header">
+          <span class="project-card-title">ESP32 Web-Controlled Robot Vehicle</span>
+          <span class="project-tag tag-teal">ESP32</span>
+          <span class="project-tag tag-blue">Web UI</span>
+          <span class="project-tag tag-coral">Motor</span>
+          <span class="project-chevron">▼</span>
+        </div>
+        <div class="project-card-inner">
+          <div class="project-card-inner-content">
+            <div class="project-card-inner-text">
+              A robot vehicle driven through a browser-based HTML interface. The ESP32 hosts a web page with directional buttons — open it on any device on the same network and start driving immediately. No app required.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal-up" style="--delay: 0.12s" id="project-cloud-relay">
+        <div class="project-card-header">
+          <span class="project-card-title">ESP32 Cloud Relay Communication</span>
+          <span class="project-tag tag-teal">ESP32</span>
+          <span class="project-tag tag-blue">Cloud / IoT</span>
+          <span class="project-chevron">▼</span>
+        </div>
+        <div class="project-card-inner">
+          <div class="project-card-inner-content">
+            <div class="project-card-inner-text">
+              An IoT relay system where commands travel through the cloud — allowing the ESP32 to receive instructions from anywhere in the world, not just the local network.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="cat-label reveal-up">AI & Creative Tools</p>
+
+      <div class="project-card reveal-up" style="--delay: 0s" id="project-kfigures">
+        <div class="project-card-header">
+          <span class="project-card-title">kfigures</span>
+          <span class="project-tag tag-purple">AI Workflow</span>
+          <span class="project-tag tag-green">3D Printing</span>
+          <span class="project-chevron">▼</span>
+        </div>
+        <div class="project-card-inner">
+          <div class="project-card-inner-content">
+            <div class="project-card-inner-text">
+              A pipeline that transforms any character or real person into a 3D printable figure. Starting from an image, it runs through image and 3D generation models to produce a print-ready model — turning anyone into a collectible.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="cat-label reveal-up">Software & Automation</p>
+
+      <div class="project-card reveal-up" style="--delay: 0s" id="project-assistant">
+        <div class="project-card-header">
+          <span class="project-card-title">Python Personal Assistant System</span>
+          <span class="project-tag tag-amber">Python</span>
+          <span class="project-tag tag-blue">PC Automation</span>
+          <span class="project-chevron">▼</span>
+        </div>
+        <div class="project-card-inner">
+          <div class="project-card-inner-content">
+            <div class="project-card-inner-text">
+              A desktop assistant built in Python that integrates with OBS for PC activity recording, supports remote app launching, and feeds a live security camera — a personal control center for your machine.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What's Next -->
+  <section class="future-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="mono label-tag">006 / UPCOMING</span>
+        <h2 class="section-title">What's next.</h2>
+      </div>
+
+      <div class="future-card reveal-up" style="--delay: 0s">
+        <p class="future-card-title">Devil's Hand</p>
+        <p class="future-card-desc">A story-driven card game about a man trapped in debt and hunted by forces that aren't quite human. The game weaves narrative and card mechanics together — every hand you play moves the story forward, and the story decides the stakes of the next hand.</p>
+        <div class="future-card-tags">
+          <span class="project-tag tag-purple">Game Dev</span>
+          <span class="project-tag tag-coral">Card Game</span>
+          <span class="project-tag tag-amber">Narrative</span>
+          <span class="project-tag tag-blue">Unity</span>
+        </div>
+      </div>
+
+      <div class="future-card reveal-up" style="--delay: 0.08s">
+        <p class="future-card-title">Python Personal Assistant — v2</p>
+        <p class="future-card-desc">An overhaul of the existing assistant system: smarter voice command recognition, a wider set of actions it can perform, and a more polished overall experience — turning a working prototype into something genuinely usable every day.</p>
+        <div class="future-card-tags">
+          <span class="project-tag tag-amber">Python</span>
+          <span class="project-tag tag-blue">Voice</span>
+          <span class="project-tag tag-teal">Automation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="portfolio-cta reveal-up">
+    <div class="container">
+      <div class="portfolio-cta-inner">
+        <div class="portfolio-cta-text">
+          <span class="mono label-tag">Get in touch</span>
+          <h2 class="portfolio-cta-title">Let's build<br><em>something.</em></h2>
+        </div>
+        <a href="product.html" class="btn-primary large">
+          <span>See the Collection</span>
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">KFIGURES</div>
+      <p class="footer-tag mono">not a toy. an icon.</p>
+      <p class="footer-copy mono">© 2025 KFIGURES. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  // Project card accordion toggle
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('open');
+    });
+
+    // Spotlight effect on cards
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1);
+      const y = ((e.clientY - rect.top) / rect.height * 100).toFixed(1);
+      card.style.setProperty('--mouse-x', x + '%');
+      card.style.setProperty('--mouse-y', y + '%');
+    });
+  });
+
+  // Future card spotlight
+  document.querySelectorAll('.future-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1);
+      const y = ((e.clientY - rect.top) / rect.height * 100).toFixed(1);
+      card.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(29,158,117,0.05) 0%, transparent 60%), var(--surface)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.background = '';
+    });
+  });
+})();
+</script>
+</body>
+</html>
