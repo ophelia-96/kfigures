@@ -890,6 +890,79 @@ button { border: none; background: none; cursor: pointer; }
   color: var(--white-dim);
 }
 
+/* ── Custom Request Section ─────────────────────────────────── */
+.custom-request-section {
+  padding: var(--space-xl) 0;
+  background: var(--black);
+  border-top: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-request-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-glow), rgba(232, 224, 204, 0.18), var(--accent-glow), transparent);
+}
+
+.custom-request-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.75rem;
+}
+
+.custom-request-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, transparent, var(--border-mid));
+  margin-bottom: 0.5rem;
+}
+
+.custom-request-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  letter-spacing: 0.02em;
+  line-height: 0.92;
+  color: var(--white);
+}
+
+.custom-request-title em {
+  color: var(--accent);
+  font-style: italic;
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 0.65em;
+  display: block;
+  margin-top: 0.15em;
+}
+
+.custom-request-body {
+  font-size: 1rem;
+  color: var(--white-dim);
+  max-width: 480px;
+  line-height: 1.75;
+}
+
+.custom-request-email {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--white-dim);
+  opacity: 0.6;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.custom-request-email:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
 /* ── About Hero ─────────────────────────────────────────────── */
 .about-hero {
   min-height: 65vh;
