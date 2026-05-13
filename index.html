@@ -16,9 +16,13 @@
   <nav class="nav">
     <a href="index.html" class="logo">KFIGURES</a>
     <ul class="nav-links">
-      <li><a href="index.html" class="nav-link active">Home</a></li>
-      <li><a href="product.html" class="nav-link">Product</a></li>
-      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a></li>
+      <li>
+        <button class="lang-toggle" id="langToggle" onclick="kfToggleLang()" aria-label="Toggle Language"></button>
+      </li>
+      <li><a href="product.html" class="nav-link" data-i18n="nav.product">Product</a></li>
+      <li><a href="process.html" class="nav-link" data-i18n="nav.process">Process</a></li>
+      <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span>
@@ -29,9 +33,11 @@
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
   <ul>
-    <li><a href="index.html" class="mobile-link">Home</a></li>
-    <li><a href="product.html" class="mobile-link">Product</a></li>
-    <li><a href="about.html" class="mobile-link">About</a></li>
+    <li><a href="index.html" class="mobile-link" data-i18n="nav.home">Home</a></li>
+    <li><a href="product.html" class="mobile-link" data-i18n="nav.product">Product</a></li>
+    <li><a href="process.html" class="mobile-link" data-i18n="nav.process">Process</a></li>
+    <li><a href="about.html" class="mobile-link" data-i18n="nav.about">About</a></li>
+    <li><button class="lang-toggle mobile-lang-toggle" id="langToggleMobile" onclick="kfToggleLang()" aria-label="Toggle Language"></button></li>
   </ul>
 </div>
 
@@ -48,7 +54,7 @@
       <div class="hero-eyebrow reveal-up" style="--delay: 0.1s">
         <span class="mono">001</span>
         <span class="eyebrow-line"></span>
-        <span class="mono">CUSTOM FIGURES</span>
+        <span class="mono" data-i18n="hero.eyebrow">CUSTOM FIGURES</span>
       </div>
 
       <h1 class="hero-title glitch" data-text="KFIGURES">
@@ -57,23 +63,23 @@
 
       <div class="hero-divider reveal-up" style="--delay: 0.5s"></div>
 
-      <h2 class="hero-statement reveal-up" style="--delay: 0.65s">
+      <h2 class="hero-statement reveal-up" style="--delay: 0.65s" data-i18n="hero.statement" data-i18n-html>
         not a toy,<br><em>an icon</em>
       </h2>
 
       <div class="hero-cta reveal-up" style="--delay: 0.85s">
         <a href="product.html" class="btn-primary">
-          <span>Explore the Drop</span>
+          <span data-i18n="hero.cta.explore">Explore the Drop</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
-        <a href="about.html" class="btn-ghost">Our Story</a>
+        <a href="about.html" class="btn-ghost" data-i18n="hero.cta.story">Our Story</a>
       </div>
     </div>
 
     <div class="hero-scroll-indicator">
-      <span class="mono">scroll</span>
+      <span class="mono" data-i18n="hero.scroll">scroll</span>
       <div class="scroll-line"></div>
     </div>
   </section>
@@ -82,21 +88,21 @@
   <div class="marquee-section">
     <div class="marquee-track">
       <div class="marquee-inner">
-        <span>CUSTOM 3D FIGURES</span>
+        <span data-i18n="marquee.1">CUSTOM 3D FIGURES</span>
         <span class="dot">✦</span>
-        <span>LUXURY COLLECTIBLES</span>
+        <span data-i18n="marquee.2">LUXURY COLLECTIBLES</span>
         <span class="dot">✦</span>
-        <span>MADE TO ORDER</span>
+        <span data-i18n="marquee.3">MADE TO ORDER</span>
         <span class="dot">✦</span>
-        <span>NOT A TOY. AN ICON.</span>
+        <span data-i18n="marquee.4">NOT A TOY. AN ICON.</span>
         <span class="dot">✦</span>
-        <span>CUSTOM 3D FIGURES</span>
+        <span data-i18n="marquee.1">CUSTOM 3D FIGURES</span>
         <span class="dot">✦</span>
-        <span>LUXURY COLLECTIBLES</span>
+        <span data-i18n="marquee.2">LUXURY COLLECTIBLES</span>
         <span class="dot">✦</span>
-        <span>MADE TO ORDER</span>
+        <span data-i18n="marquee.3">MADE TO ORDER</span>
         <span class="dot">✦</span>
-        <span>NOT A TOY. AN ICON.</span>
+        <span data-i18n="marquee.4">NOT A TOY. AN ICON.</span>
         <span class="dot">✦</span>
       </div>
     </div>
@@ -107,13 +113,13 @@
     <div class="container">
       <div class="intro-grid">
         <div class="intro-label reveal-up">
-          <span class="mono label-tag">002 / CONCEPT</span>
+          <span class="mono label-tag" data-i18n="intro.label">002 / CONCEPT</span>
         </div>
         <div class="intro-text">
-          <p class="intro-large reveal-up" style="--delay: 0.1s">
+          <p class="intro-large reveal-up" style="--delay: 0.1s" data-i18n="intro.large" data-i18n-html>
             We turn people into <em>objects of desire.</em>
           </p>
-          <p class="intro-body reveal-up" style="--delay: 0.2s">
+          <p class="intro-body reveal-up" style="--delay: 0.2s" data-i18n="intro.body">
             Handcrafted 3D-printed figures built from your image, your energy, your identity. 
             Not mass-produced. Not generic. Singular.
           </p>
@@ -129,14 +135,14 @@
 
         <div class="feature-card reveal-up" style="--delay: 0s">
           <div class="feature-number mono">01</div>
-          <h3 class="feature-title">Yours Only</h3>
-          <p class="feature-body">Every figure is a limited edition of one. No reissues. No duplicates. Entirely yours.</p>
+          <h3 class="feature-title" data-i18n="feature.01.title">Yours Only</h3>
+          <p class="feature-body" data-i18n="feature.01.body">Every figure is a limited edition of one. No reissues. No duplicates. Entirely yours.</p>
         </div>
 
         <div class="feature-card reveal-up" style="--delay: 0.1s">
           <div class="feature-number mono">02</div>
-          <h3 class="feature-title">Precision Craft</h3>
-          <p class="feature-body">Studio-grade 3D printing. Hand-finished. Obsessive attention to detail on every millimeter.</p>
+          <h3 class="feature-title" data-i18n="feature.02.title">Precision Craft</h3>
+          <p class="feature-body" data-i18n="feature.02.body">Studio-grade 3D printing. Hand-finished. Obsessive attention to detail on every millimeter.</p>
         </div>
 
 
@@ -149,11 +155,11 @@
     <div class="container">
       <div class="cta-band-inner">
         <div class="cta-band-text">
-          <span class="mono">Ready?</span>
-          <h2 class="cta-band-title">Claim your figure.</h2>
+          <span class="mono" data-i18n="cta.ready">Ready?</span>
+          <h2 class="cta-band-title" data-i18n="cta.title">Claim your figure.</h2>
         </div>
         <a href="product.html" class="btn-primary large">
-          <span>See the Collection</span>
+          <span data-i18n="cta.button">See the Collection</span>
           <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -168,12 +174,13 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-logo">KFIGURES</div>
-      <p class="footer-tag mono">not a toy. an icon.</p>
-      <p class="footer-copy mono">© 2025 KFIGURES. All rights reserved.</p>
+      <p class="footer-tag mono" data-i18n="footer.tag">not a toy. an icon.</p>
+      <p class="footer-copy mono" data-i18n="footer.copy">© 2025 KFIGURES. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/translate.js"></script>
 </body>
 </html>

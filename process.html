@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process | KFIGURES</title>
+<meta name="description" content="See how KFIGURES brings your custom 3D-printed figure to life — from concept to delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <nav class="nav">
+    <a href="index.html" class="logo">KFIGURES</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+      <li>
+        <button class="lang-toggle" id="langToggle" onclick="kfToggleLang()" aria-label="Toggle Language"></button>
+      </li>
+      <li><a href="product.html" class="nav-link" data-i18n="nav.product">Product</a></li>
+      <li><a href="process.html" class="nav-link active" data-i18n="nav.process">Process</a></li>
+      <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="index.html" class="mobile-link" data-i18n="nav.home">Home</a></li>
+    <li><a href="product.html" class="mobile-link" data-i18n="nav.product">Product</a></li>
+    <li><a href="process.html" class="mobile-link" data-i18n="nav.process">Process</a></li>
+    <li><a href="about.html" class="mobile-link" data-i18n="nav.about">About</a></li>
+    <li><button class="lang-toggle mobile-lang-toggle" id="langToggleMobile" onclick="kfToggleLang()" aria-label="Toggle Language"></button></li>
+  </ul>
+</div>
+
+<main>
+
+  <!-- Hero with timelapse1 video -->
+  <section class="hero product-hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/videos/timelapse1.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay product-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-up" style="--delay: 0.1s">
+        <span class="mono">003</span>
+        <span class="eyebrow-line"></span>
+        <span class="mono" data-i18n="process.eyebrow">THE CRAFT</span>
+      </div>
+
+      <h1 class="hero-title hero-title--product reveal-up" style="--delay: 0.3s" data-i18n="process.title" data-i18n-html>
+        From Vision<br>to <em>Reality.</em>
+      </h1>
+
+      <p class="product-subtitle reveal-up" style="--delay: 0.55s" data-i18n="process.subtitle">
+        every figure has a story.
+      </p>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span class="mono" data-i18n="hero.scroll">scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Process Steps -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="mono label-tag" data-i18n="process.section.label">003 / HOW IT WORKS</span>
+        <h2 class="section-title" data-i18n="process.section.title">The Process</h2>
+      </div>
+
+      <div class="process-steps">
+
+        <div class="process-step reveal-up" style="--delay: 0s">
+          <div class="step-number mono">01</div>
+          <div class="step-content">
+            <h3 class="step-title" data-i18n="step.01.title">Submit Your Vision</h3>
+            <p class="step-body" data-i18n="step.01.body">
+              Send us your references. Photos, mood boards, concepts — 
+              the more you bring, the sharper the result.
+            </p>
+          </div>
+          <div class="step-accent"></div>
+        </div>
+
+        <div class="process-step reveal-up" style="--delay: 0.1s">
+          <div class="step-number mono">02</div>
+          <div class="step-content">
+            <h3 class="step-title" data-i18n="step.02.title">We Design the Model</h3>
+            <p class="step-body" data-i18n="step.02.body">
+              Our studio translates your identity into a 3D model. 
+              Every pose, texture, and expression dialed in.
+            </p>
+          </div>
+          <div class="step-accent"></div>
+        </div>
+
+        <div class="process-step reveal-up" style="--delay: 0.2s">
+          <div class="step-number mono">03</div>
+          <div class="step-content">
+            <h3 class="step-title" data-i18n="step.03.title">You Approve</h3>
+            <p class="step-body" data-i18n="step.03.body">
+              Review. Refine. Nothing goes to print without your sign-off. 
+              Iteration is part of the craft.
+            </p>
+          </div>
+          <div class="step-accent"></div>
+        </div>
+
+        <div class="process-step reveal-up" style="--delay: 0.3s">
+          <div class="step-number mono">04</div>
+          <div class="step-content">
+            <h3 class="step-title" data-i18n="step.04.title">We Print & Finish</h3>
+            <p class="step-body" data-i18n="step.04.body">
+              Studio-grade 3D printing. Hand-painted. Sealed. 
+              Packaged like the collectable it is.
+            </p>
+          </div>
+          <div class="step-accent"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials Section -->
+  <section class="materials-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="mono label-tag" data-i18n="process.materials.label">003.5 / MATERIALS</span>
+        <h2 class="section-title" data-i18n="process.materials.title">What Goes Into Every Figure</h2>
+      </div>
+
+      <div class="materials-grid">
+        <div class="material-card reveal-up" style="--delay: 0s">
+          <div class="material-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="var(--accent)" stroke-width="1"/><path d="M14 26c0-6 12-6 12-12" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="material-title" data-i18n="process.mat.1.title">PLA Filament</h3>
+          <p class="material-body" data-i18n="process.mat.1.body">Premium quality PLA — strong, lightweight, and dimensionally accurate.</p>
+        </div>
+        <div class="material-card reveal-up" style="--delay: 0.1s">
+          <div class="material-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="var(--accent)" stroke-width="1"/><path d="M16 28V16l4-4 4 4v12" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="material-title" data-i18n="process.mat.2.title">Acrylic Paint</h3>
+          <p class="material-body" data-i18n="process.mat.2.body">Hand-applied acrylic paints for vibrant, durable color. Each stroke is deliberate.</p>
+        </div>
+        <div class="material-card reveal-up" style="--delay: 0.2s">
+          <div class="material-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="var(--accent)" stroke-width="1"/><path d="M15 20a5 5 0 0110 0M20 15v-3M14 17l-2-2M26 17l2-2" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="material-title" data-i18n="process.mat.3.title">UV Sealant</h3>
+          <p class="material-body" data-i18n="process.mat.3.body">Professional-grade UV coating locks in color and protects against wear and sunlight.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="mono label-tag" data-i18n="process.timeline.label">003.7 / TIMELINE</span>
+        <h2 class="section-title" data-i18n="process.timeline.title">From Order to Doorstep</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item reveal-up" style="--delay: 0s">
+          <div class="timeline-marker"></div>
+          <div class="timeline-label mono" data-i18n="process.tl.1.label">DAY 1-2</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title" data-i18n="process.tl.1.title">Consultation</h3>
+            <p class="timeline-body" data-i18n="process.tl.1.body">We discuss your vision and finalize the concept.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--delay: 0.08s">
+          <div class="timeline-marker"></div>
+          <div class="timeline-label mono" data-i18n="process.tl.2.label">DAY 3-5</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title" data-i18n="process.tl.2.title">3D Modeling</h3>
+            <p class="timeline-body" data-i18n="process.tl.2.body">Your figure is sculpted digitally with precision.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--delay: 0.16s">
+          <div class="timeline-marker"></div>
+          <div class="timeline-label mono" data-i18n="process.tl.3.label">DAY 6-7</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title" data-i18n="process.tl.3.title">Printing</h3>
+            <p class="timeline-body" data-i18n="process.tl.3.body">Studio-grade FDM printing brings the model to life.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--delay: 0.24s">
+          <div class="timeline-marker"></div>
+          <div class="timeline-label mono" data-i18n="process.tl.4.label">DAY 8-9</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title" data-i18n="process.tl.4.title">Hand Finishing</h3>
+            <p class="timeline-body" data-i18n="process.tl.4.body">Sanding, painting, sealing — every detail perfected.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--delay: 0.32s">
+          <div class="timeline-marker"></div>
+          <div class="timeline-label mono" data-i18n="process.tl.5.label">DAY 10+</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title" data-i18n="process.tl.5.title">Delivery</h3>
+            <p class="timeline-body" data-i18n="process.tl.5.body">Carefully packaged and shipped to your door.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="process-cta-section reveal-up">
+    <div class="container">
+      <div class="drop-inner">
+        <h2 class="drop-title" data-i18n="process.cta.title">See it in person.</h2>
+        <p class="drop-body" data-i18n="process.cta.body">Ready to start your own figure?</p>
+        <div class="drop-actions">
+          <a href="product.html" class="btn-primary large">
+            <span data-i18n="process.cta.button">View Products</span>
+            <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Video (timelapse2) -->
+  <section class="bottom-video-section">
+    <video class="bottom-video" autoplay muted loop playsinline>
+      <source src="assets/videos/timelapse2.mp4" type="video/mp4">
+    </video>
+    <div class="bottom-video-overlay"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">KFIGURES</div>
+      <p class="footer-tag mono" data-i18n="footer.tag">not a toy. an icon.</p>
+      <p class="footer-copy mono" data-i18n="footer.copy">© 2025 KFIGURES. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/translate.js"></script>
+</body>
+</html>

@@ -15,9 +15,13 @@
   <nav class="nav">
     <a href="index.html" class="logo">KFIGURES</a>
     <ul class="nav-links">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="product.html" class="nav-link active">Product</a></li>
-      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+      <li>
+        <button class="lang-toggle" id="langToggle" onclick="kfToggleLang()" aria-label="Toggle Language"></button>
+      </li>
+      <li><a href="product.html" class="nav-link active" data-i18n="nav.product">Product</a></li>
+      <li><a href="process.html" class="nav-link" data-i18n="nav.process">Process</a></li>
+      <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">
       <span></span><span></span>
@@ -27,9 +31,11 @@
 
 <div class="mobile-menu" id="mobileMenu">
   <ul>
-    <li><a href="index.html" class="mobile-link">Home</a></li>
-    <li><a href="product.html" class="mobile-link">Product</a></li>
-    <li><a href="about.html" class="mobile-link">About</a></li>
+    <li><a href="index.html" class="mobile-link" data-i18n="nav.home">Home</a></li>
+    <li><a href="product.html" class="mobile-link" data-i18n="nav.product">Product</a></li>
+    <li><a href="process.html" class="mobile-link" data-i18n="nav.process">Process</a></li>
+    <li><a href="about.html" class="mobile-link" data-i18n="nav.about">About</a></li>
+    <li><button class="lang-toggle mobile-lang-toggle" id="langToggleMobile" onclick="kfToggleLang()" aria-label="Toggle Language"></button></li>
   </ul>
 </div>
 
@@ -46,83 +52,21 @@
       <div class="hero-eyebrow reveal-up" style="--delay: 0.1s">
         <span class="mono">002</span>
         <span class="eyebrow-line"></span>
-        <span class="mono">THE DROP</span>
+        <span class="mono" data-i18n="product.eyebrow">THE DROP</span>
       </div>
 
-      <h1 class="hero-title hero-title--product reveal-up" style="--delay: 0.3s">
+      <h1 class="hero-title hero-title--product reveal-up" style="--delay: 0.3s" data-i18n="product.title" data-i18n-html>
         whatever<br>you need,<br><em>we got'em.</em>
       </h1>
 
-      <p class="product-subtitle reveal-up" style="--delay: 0.55s">
+      <p class="product-subtitle reveal-up" style="--delay: 0.55s" data-i18n="product.subtitle">
         if we don't — we probably will.
       </p>
     </div>
 
     <div class="hero-scroll-indicator">
-      <span class="mono">scroll</span>
+      <span class="mono" data-i18n="hero.scroll">scroll</span>
       <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- Process Section -->
-  <section class="process-section">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <span class="mono label-tag">003 / HOW IT WORKS</span>
-        <h2 class="section-title">The Process</h2>
-      </div>
-
-      <div class="process-steps">
-
-        <div class="process-step reveal-up" style="--delay: 0s">
-          <div class="step-number mono">01</div>
-          <div class="step-content">
-            <h3 class="step-title">Submit Your Vision</h3>
-            <p class="step-body">
-              Send us your references. Photos, mood boards, concepts — 
-              the more you bring, the sharper the result.
-            </p>
-          </div>
-          <div class="step-accent"></div>
-        </div>
-
-        <div class="process-step reveal-up" style="--delay: 0.1s">
-          <div class="step-number mono">02</div>
-          <div class="step-content">
-            <h3 class="step-title">We Design the Model</h3>
-            <p class="step-body">
-              Our studio translates your identity into a 3D model. 
-              Every pose, texture, and expression dialed in.
-            </p>
-          </div>
-          <div class="step-accent"></div>
-        </div>
-
-        <div class="process-step reveal-up" style="--delay: 0.2s">
-          <div class="step-number mono">03</div>
-          <div class="step-content">
-            <h3 class="step-title">You Approve</h3>
-            <p class="step-body">
-              Review. Refine. Nothing goes to print without your sign-off. 
-              Iteration is part of the craft.
-            </p>
-          </div>
-          <div class="step-accent"></div>
-        </div>
-
-        <div class="process-step reveal-up" style="--delay: 0.3s">
-          <div class="step-number mono">04</div>
-          <div class="step-content">
-            <h3 class="step-title">We Print & Finish</h3>
-            <p class="step-body">
-              Studio-grade 3D printing. Hand-painted. Sealed. 
-              Packaged like the collectable it is.
-            </p>
-          </div>
-          <div class="step-accent"></div>
-        </div>
-
-      </div>
     </div>
   </section>
 
@@ -131,9 +75,9 @@
     <div class="container">
       <div class="spec-grid">
         <div class="spec-editorial reveal-up">
-          <span class="mono label-tag">004 / SPECS</span>
-          <h2 class="spec-title">Built to<br><em>last forever.</em></h2>
-          <p class="spec-desc">
+          <span class="mono label-tag" data-i18n="spec.label">004 / SPECS</span>
+          <h2 class="spec-title" data-i18n="spec.title" data-i18n-html>Built to<br><em>last forever.</em></h2>
+          <p class="spec-desc" data-i18n="spec.desc">
             Not mass-produced. Not offshore. Each figure is a one-off studio production, 
             finished by hand, made to endure.
           </p>
@@ -141,23 +85,50 @@
 
         <div class="spec-items">
           <div class="spec-item reveal-up" style="--delay: 0s">
-            <span class="spec-label mono">Material</span>
-            <span class="spec-value">PLA filament</span>
+            <span class="spec-label mono" data-i18n="spec.material">Material</span>
+            <span class="spec-value" data-i18n="spec.material.val">PLA filament</span>
           </div>
-
           <div class="spec-item reveal-up" style="--delay: 0.1s">
-            <span class="spec-label mono">Finish</span>
-            <span class="spec-value">Hand-painted, UV sealed</span>
+            <span class="spec-label mono" data-i18n="spec.finish">Finish</span>
+            <span class="spec-value" data-i18n="spec.finish.val">Hand-painted, UV sealed</span>
           </div>
-
           <div class="spec-item reveal-up" style="--delay: 0.2s">
-            <span class="spec-label mono">Edition</span>
-            <span class="spec-value">Edition of 1 — yours only</span>
+            <span class="spec-label mono" data-i18n="spec.edition">Edition</span>
+            <span class="spec-value" data-i18n="spec.edition.val">Edition of 1 — yours only</span>
           </div>
           <div class="spec-item reveal-up" style="--delay: 0.25s">
-            <span class="spec-label mono">Packaging</span>
-            <span class="spec-value">High-quality display box</span>
+            <span class="spec-label mono" data-i18n="spec.packaging">Packaging</span>
+            <span class="spec-value" data-i18n="spec.packaging.val">High-quality display box</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Gallery -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="mono label-tag" data-i18n="gallery.label">004.5 / GALLERY</span>
+        <h2 class="section-title" data-i18n="gallery.title">Our Work</h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-up" style="--delay: 0s">
+          <img src="assets/images/figure1.png" alt="Character 1" class="gallery-image">
+          <p class="gallery-caption mono" data-i18n="gallery.1">Character 1</p>
+        </div>
+        <div class="gallery-item reveal-up" style="--delay: 0.08s">
+          <img src="assets/images/figure2.png" alt="Character 2" class="gallery-image">
+          <p class="gallery-caption mono" data-i18n="gallery.2">Character 2</p>
+        </div>
+        <div class="gallery-item reveal-up" style="--delay: 0.16s">
+          <img src="assets/images/figure3.png" alt="Character 3" class="gallery-image">
+          <p class="gallery-caption mono" data-i18n="gallery.3">Character 3</p>
+        </div>
+        <div class="gallery-item reveal-up" style="--delay: 0.24s">
+          <img src="assets/images/figure4.png" alt="Custom Character" class="gallery-image">
+          <p class="gallery-caption mono" data-i18n="gallery.4">Custom Character</p>
         </div>
       </div>
     </div>
@@ -167,45 +138,37 @@
   <section class="types-section">
     <div class="container">
       <div class="section-header reveal-up">
-        <span class="mono label-tag">005 / OFFERINGS</span>
-        <h2 class="section-title">What We Make</h2>
+        <span class="mono label-tag" data-i18n="types.label">005 / OFFERINGS</span>
+        <h2 class="section-title" data-i18n="types.title">What We Make</h2>
       </div>
 
       <div class="types-grid">
         <div class="type-card reveal-up" style="--delay: 0s">
           <div class="type-tag mono">TYPE 01</div>
-          <h3 class="type-name">The Self</h3>
-          <p class="type-desc">A figure of you. Your likeness, your style, your energy — made permanent.</p>
-          <div class="type-cta">
-            <span class="mono">Inquire →</span>
-          </div>
+          <h3 class="type-name" data-i18n="type.01.name">The Self</h3>
+          <p class="type-desc" data-i18n="type.01.desc">A figure of you. Your likeness, your style, your energy — made permanent.</p>
+          <div class="type-cta"><span class="mono" data-i18n="type.01.cta">Inquire →</span></div>
         </div>
 
         <div class="type-card reveal-up" style="--delay: 0.1s">
           <div class="type-tag mono">TYPE 02</div>
-          <h3 class="type-name">The Gift</h3>
-          <p class="type-desc">The ultimate gift. Custom figure of someone else. Built for obsession, not shelves.</p>
-          <div class="type-cta">
-            <span class="mono">Inquire →</span>
-          </div>
+          <h3 class="type-name" data-i18n="type.02.name">The Gift</h3>
+          <p class="type-desc" data-i18n="type.02.desc">The ultimate gift. Custom figure of someone else. Built for obsession, not shelves.</p>
+          <div class="type-cta"><span class="mono" data-i18n="type.02.cta">Inquire →</span></div>
         </div>
 
         <div class="type-card reveal-up" style="--delay: 0.2s">
           <div class="type-tag mono">TYPE 03</div>
-          <h3 class="type-name">The Character</h3>
-          <p class="type-desc">Original characters, IP, fantasy builds. If you can imagine it, we can print it.</p>
-          <div class="type-cta">
-            <span class="mono">Inquire →</span>
-          </div>
+          <h3 class="type-name" data-i18n="type.03.name">The Character</h3>
+          <p class="type-desc" data-i18n="type.03.desc">Original characters, IP, fantasy builds. If you can imagine it, we can print it.</p>
+          <div class="type-cta"><span class="mono" data-i18n="type.03.cta">Inquire →</span></div>
         </div>
 
         <div class="type-card reveal-up" style="--delay: 0.3s">
           <div class="type-tag mono">TYPE 04</div>
-          <h3 class="type-name">The Icon</h3>
-          <p class="type-desc">For brands, artists, and collaborators. Limited drops. High-impact collectibles.</p>
-          <div class="type-cta">
-            <span class="mono">Inquire →</span>
-          </div>
+          <h3 class="type-name" data-i18n="type.04.name">The Icon</h3>
+          <p class="type-desc" data-i18n="type.04.desc">For brands, artists, and collaborators. Limited drops. High-impact collectibles.</p>
+          <div class="type-cta"><span class="mono" data-i18n="type.04.cta">Inquire →</span></div>
         </div>
       </div>
     </div>
@@ -215,17 +178,17 @@
   <section class="drop-section reveal-up">
     <div class="container">
       <div class="drop-inner">
-        <div class="drop-tag mono">LIMITED COMMISSIONS OPEN</div>
-        <h2 class="drop-title">Slots are rare.<br>Don't sleep on yours.</h2>
-        <p class="drop-body">Once they're gone, the waitlist opens.</p>
+        <div class="drop-tag mono" data-i18n="drop.tag">LIMITED COMMISSIONS OPEN</div>
+        <h2 class="drop-title" data-i18n="drop.title" data-i18n-html>Slots are rare.<br>Don't sleep on yours.</h2>
+        <p class="drop-body" data-i18n="drop.body">Once they're gone, the waitlist opens.</p>
         <div class="drop-actions">
           <a href="about.html" class="btn-primary large">
-            <span>Start Your Commission</span>
+            <span data-i18n="drop.button">Start Your Commission</span>
             <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
-          <span class="drop-note mono">Response within 48h</span>
+          <span class="drop-note mono" data-i18n="drop.note">Response within 48h</span>
         </div>
       </div>
     </div>
@@ -236,14 +199,14 @@
     <div class="container">
       <div class="custom-request-inner reveal-up">
         <div class="custom-request-line"></div>
-        <span class="mono label-tag">006 / CAN'T FIND IT?</span>
-        <h2 class="custom-request-title">If we don't have<br>what you want,<br><em>reach out.</em></h2>
-        <p class="custom-request-body">
+        <span class="mono label-tag" data-i18n="custom.label">006 / CAN'T FIND IT?</span>
+        <h2 class="custom-request-title" data-i18n="custom.title" data-i18n-html>If we don't have<br>what you want,<br><em>reach out.</em></h2>
+        <p class="custom-request-body" data-i18n="custom.body">
           We build what doesn't exist yet. Tell us what you need —
           if we can make it, it's yours.
         </p>
         <a href="mailto:kmustafakilicc@gmail.com" class="btn-primary large" id="contactEmailBtn">
-          <span>Contact Us</span>
+          <span data-i18n="custom.button">Contact Us</span>
           <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
             <path d="M2 4l6 4.5L14 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
             <rect x="1.5" y="3" width="13" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
@@ -254,18 +217,74 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="mono label-tag" data-i18n="faq.label">007 / FAQ</span>
+        <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal-up" style="--delay: 0s">
+          <button class="faq-question" id="faqQ1">
+            <span data-i18n="faq.q1">How long does it take?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a1">The printing takes about 5-6 hours, painting takes about 3-4 hours then the cargo takes a few days depending on where you live.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal-up" style="--delay: 0.08s">
+          <button class="faq-question" id="faqQ2">
+            <span data-i18n="faq.q2">What type of figures do you sell?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a2">It can be a figure of a fictional character, custom figure of a loved one, anyone if you have a picture.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal-up" style="--delay: 0.16s">
+          <button class="faq-question" id="faqQ3">
+            <span data-i18n="faq.q3">How much does these figures cost?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a3">The prices are on the shopier page, but if you have questions you can reach my mail.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
   <div class="container">
     <div class="footer-inner">
       <div class="footer-logo">KFIGURES</div>
-      <p class="footer-tag mono">not a toy. an icon.</p>
-      <p class="footer-copy mono">© 2025 KFIGURES. All rights reserved.</p>
+      <p class="footer-tag mono" data-i18n="footer.tag">not a toy. an icon.</p>
+      <p class="footer-copy mono" data-i18n="footer.copy">© 2025 KFIGURES. All rights reserved.</p>
     </div>
   </div>
 </footer>
 
 <script src="js/script.js"></script>
+<script src="js/translate.js"></script>
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    // Toggle current
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
 </body>
 </html>
