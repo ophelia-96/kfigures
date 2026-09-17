@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mustafa — Portfolio</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #ffffff;
+    --bg-secondary: #f5f5f3;
+    --text-primary: #1a1a18;
+    --text-secondary: #6b6b67;
+    --text-tertiary: #a0a09c;
+    --border: rgba(0,0,0,0.12);
+    --border-hover: rgba(0,0,0,0.25);
+    --radius-md: 8px;
+    --radius-lg: 12px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1c1c1a;
+      --bg-secondary: #252523;
+      --text-primary: #f0efe8;
+      --text-secondary: #a0a09c;
+      --text-tertiary: #6b6b67;
+      --border: rgba(255,255,255,0.12);
+      --border-hover: rgba(255,255,255,0.25);
+    }
+    .teal-tag  { background:#085041; color:#9FE1CB; }
+    .amber-tag { background:#633806; color:#FAC775; }
+    .blue-tag  { background:#0C447C; color:#B5D4F4; }
+    .purple-tag{ background:#3C3489; color:#CECBF6; }
+    .coral-tag { background:#712B13; color:#F5C4B3; }
+    .green-tag { background:#27500A; color:#C0DD97; }
+    .bio-box   { border-left-color:#1D9E75; }
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    padding: 2.5rem 1rem;
+  }
+
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .bio-box {
+    border-left: 2px solid #1D9E75;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin-bottom: 2rem;
+    font-size: 14px;
+    color: var(--text-primary);
+  }
+
+  .section-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin: 0 0 1rem;
+  }
+
+  .divider {
+    height: 0.5px;
+    background: var(--border);
+    margin: 0 0 2rem;
+  }
+
+  .port-section { margin: 0 0 2.5rem; }
+
+  .skill-pill {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin: 3px;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    border: 0.5px solid var(--border);
+  }
+
+  .cat-label {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 1.5rem 0 0.5rem;
+  }
+  .cat-label:first-child { margin-top: 0; }
+
+  .port-card {
+    background: var(--bg);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  .port-card:hover { border-color: var(--border-hover); }
+
+  .port-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .port-card-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .port-chevron {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    transition: transform 0.15s;
+    flex-shrink: 0;
+  }
+  .port-card.open .port-chevron { transform: rotate(180deg); }
+
+  .port-card-inner {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 0.5px solid var(--border);
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .port-card.open .port-card-inner { display: block; }
+
+  .port-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin: 2px 3px 2px 0;
+  }
+
+  .teal-tag   { background:#E1F5EE; color:#0F6E56; }
+  .amber-tag  { background:#FAEEDA; color:#854F0B; }
+  .blue-tag   { background:#E6F1FB; color:#185FA5; }
+  .purple-tag { background:#EEEDFE; color:#534AB7; }
+  .coral-tag  { background:#FAECE7; color:#993C1D; }
+  .green-tag  { background:#EAF3DE; color:#3B6D11; }
+
+  .future-card {
+    background: var(--bg-secondary);
+    border: 0.5px dashed var(--border-hover);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    margin-bottom: 10px;
+  }
+  .future-title { font-size: 14px; font-weight: 500; color: var(--text-primary); }
+  .future-desc  { font-size: 13px; color: var(--text-secondary); margin-top: 4px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div style="margin-bottom:2rem;">
+    <h1 style="font-size:26px;font-weight:500;color:var(--text-primary);margin:0 0 4px;">Kondor Mustafa Kılıç</h1>
+    <p style="font-size:13px;color:var(--text-tertiary);margin:0;">Maker · Embedded Systems · AI</p>
+  </div>
+
+  <div class="bio-box">
+    I'm a maker and embedded systems developer who builds at the intersection of hardware, software, and AI. From IoT systems that respond to your phone to AI-powered 3D printing workflows — most of what I make is built in collaboration with AI tools. Currently expanding into game development and deepening my automation work.
+  </div>
+
+  <div class="port-section">
+    <p class="section-title">Skills & tools</p>
+    <div>
+      <span class="skill-pill">Arduino</span>
+      <span class="skill-pill">ESP32</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">Unity</span>
+      <span class="skill-pill">AI tools</span>
+      <span class="skill-pill">3D printing</span>
+      <span class="skill-pill">Image generation</span>
+      <span class="skill-pill">3D generation</span>
+      <span class="skill-pill">Video editing</span>
+      <span class="skill-pill">Telegram Bot API</span>
+      <span class="skill-pill">Bluetooth / WiFi</span>
+      <span class="skill-pill">ESP32-CAM</span>
+      <span class="skill-pill">Web servers</span>
+      <span class="skill-pill">OBS integration</span>
+      <span class="skill-pill">Home automation</span>
+      <span class="skill-pill">Robotics</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="port-section">
+    <p class="section-title">Completed projects</p>
+
+    <p class="cat-label">IoT & remote control</p>
+
+    <div class="port-card" onclick="this.classList.toggle('open')">
+      <div class="port-card-header">
+        <span class="port-card-title">ESP32 Telegram PC Wake System</span>
+        <span class="port-tag teal-tag">ESP32</span>
+        <span class="port-tag blue-tag">Telegram</span>
+        <span class="port-chevron">▼</span>
+      </div>
+      <div class="port-card-inner">A remote PC power-on system triggered by a Telegram message. The ESP32 listens for the "/on" command sent to a Telegram bot — when it receives it, it wakes up the connected PC. No need to be home.</div>
+    </div>
+
+    <div class="port-card" onclick="this.classList.toggle('open')">
+      <div class="port-card-header">
+        <span class="port-card-title">ESP32 Web-Controlled Robot Vehicle</span>
+        <span class="port-tag teal-tag">ESP32</span>
+        <span class="port-tag blue-tag">Web UI</span>
+        <span class="port-tag coral-tag">Motor</span>
+        <span class="port-chevron">▼</span>
+      </div>
+      <div class="port-card-inner">A robot vehicle driven through a browser-based HTML interface. The ESP32 hosts a web page with directional buttons — open it on any device on the same network and start driving immediately. No app required.</div>
+    </div>
+
+    <div class="port-card" onclick="this.classList.toggle('open')">
+      <div class="port-card-header">
+        <span class="port-card-title">ESP32 Cloud Relay Communication</span>
+        <span class="port-tag teal-tag">ESP32</span>
+        <span class="port-tag blue-tag">Cloud / IoT</span>
+        <span class="port-chevron">▼</span>
+      </div>
+      <div class="port-card-inner">An IoT relay system where commands travel through the cloud — allowing the ESP32 to receive instructions from anywhere in the world, not just the local network.</div>
+    </div>
+
+    <p class="cat-label">AI & creative tools</p>
+
+    <div class="port-card" onclick="this.classList.toggle('open')">
+      <div class="port-card-header">
+        <span class="port-card-title">kfigures</span>
+        <span class="port-tag purple-tag">AI workflow</span>
+        <span class="port-tag green-tag">3D printing</span>
+        <span class="port-chevron">▼</span>
+      </div>
+      <div class="port-card-inner">A pipeline that transforms any character or real person into a 3D printable figure. Starting from an image, it runs through image and 3D generation models to produce a print-ready model — turning anyone into a collectible.</div>
+    </div>
+
+    <p class="cat-label">Software & automation</p>
+
+    <div class="port-card" onclick="this.classList.toggle('open')">
+      <div class="port-card-header">
+        <span class="port-card-title">Python Personal Assistant System</span>
+        <span class="port-tag amber-tag">Python</span>
+        <span class="port-tag blue-tag">PC Automation</span>
+        <span class="port-chevron">▼</span>
+      </div>
+      <div class="port-card-inner">A desktop assistant built in Python that integrates with OBS for PC activity recording, supports remote app launching, and feeds a live security camera — a personal control center for your machine.</div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="port-section">
+    <p class="section-title">What's next</p>
+
+    <div class="future-card">
+      <p class="future-title">Devil's Hand</p>
+      <p class="future-desc">A story-driven card game about a man trapped in debt and hunted by forces that aren't quite human. The game weaves narrative and card mechanics together — every hand you play moves the story forward, and the story decides the stakes of the next hand.</p>
+      <div style="margin-top:8px;">
+        <span class="port-tag purple-tag">Game dev</span>
+        <span class="port-tag coral-tag">Card game</span>
+        <span class="port-tag amber-tag">Narrative</span>
+        <span class="port-tag blue-tag">Unity</span>
+      </div>
+    </div>
+
+    <div class="future-card">
+      <p class="future-title">Python Personal Assistant — v2</p>
+      <p class="future-desc">An overhaul of the existing assistant system: smarter voice command recognition, a wider set of actions it can perform, and a more polished overall experience — turning a working prototype into something genuinely usable every day.</p>
+      <div style="margin-top:8px;">
+        <span class="port-tag amber-tag">Python</span>
+        <span class="port-tag blue-tag">Voice</span>
+        <span class="port-tag teal-tag">Automation</span>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

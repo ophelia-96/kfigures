@@ -1,0 +1,319 @@
+{
+  "products": [
+    {
+      "shopier_id": "50641460",
+      "source": "shopier",
+      "active": true,
+      "slug": "zel-tasarm-kfigure",
+      "date_synced": "2026-09-17T13:56:02.542Z",
+      "title": "Özel Tasarım Kfigure",
+      "description": "Kendinizi, bir arkadaşınızı veya seçtiğiniz herhangi bir kişiyi size özel bir Kfigure’a dönüştürün. Referans fotoğrafınızı gönderin, biz de onu Kfigures’ın kendine özgü tarzında koleksiyonluk bir figüre dönüştürelim. Özel üretim figürünüz için gerekli olan referans görsellerini, ödeme işlemini tamamladıktan sonra karşınıza çıkacak olan sipariş onay ekranından kolayca yükleyebilirsiniz. Özel Tasarım Kfigure Boyama Seti – 9,2 cm",
+      "price": "600.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/zel-tasarm-kfigure/zel-tasarm-kfigure-1.jpg",
+        "assets/products/zel-tasarm-kfigure/zel-tasarm-kfigure-2.jpg",
+        "assets/products/zel-tasarm-kfigure/zel-tasarm-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50641460",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50881674",
+      "source": "shopier",
+      "active": true,
+      "slug": "iftler-iin-zel-tasarm-kfigure",
+      "date_synced": "2026-09-17T13:56:02.543Z",
+      "title": "Çiftler İçin Özel Tasarım Kfigure",
+      "description": "Sevdiğiniz kişiyle birlikte sizi tek bir koleksiyonluk figürde buluşturalım. Referans fotoğraflarınızı gönderin, ikinizi Kfigures’ın kendine özgü tarzında birlikte duran özel bir çift figürüne dönüştürelim.",
+      "price": "900.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/iftler-iin-zel-tasarm-kfigure/iftler-iin-zel-tasarm-kfigure-1.jpg",
+        "assets/products/iftler-iin-zel-tasarm-kfigure/iftler-iin-zel-tasarm-kfigure-2.jpg",
+        "assets/products/iftler-iin-zel-tasarm-kfigure/iftler-iin-zel-tasarm-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50881674",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50891730",
+      "source": "shopier",
+      "active": true,
+      "slug": "evcil-hayvannz-iin-zel-tasarm-kfigure",
+      "date_synced": "2026-09-17T13:56:02.544Z",
+      "title": "Evcil Hayvanınız İçin Özel Tasarım Kfigure",
+      "description": "Evcil Hayvanınız İçin Özel Tasarım Kfigure",
+      "price": "200.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/evcil-hayvannz-iin-zel-tasarm-kfigure/evcil-hayvannz-iin-zel-tasarm-kfigure-1.jpg",
+        "assets/products/evcil-hayvannz-iin-zel-tasarm-kfigure/evcil-hayvannz-iin-zel-tasarm-kfigure-2.jpg",
+        "assets/products/evcil-hayvannz-iin-zel-tasarm-kfigure/evcil-hayvannz-iin-zel-tasarm-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50891730",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50641305",
+      "source": "shopier",
+      "active": true,
+      "slug": "wolverine-kfigure",
+      "date_synced": "2026-09-17T13:56:02.545Z",
+      "title": "Wolverine Kfigure",
+      "description": "Efsanevi mutant Kfigure formunda. Wolverine’in ikonik kostümü, pençeleri ve kendine özgü sert duruşuyla X-Men’in en tanınan karakterlerinden biri koleksiyonunuza geliyor. Wolverine Kfigure Boyama Seti – 9,2 cm",
+      "price": "500.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/wolverine-kfigure/wolverine-kfigure-1.jpg",
+        "assets/products/wolverine-kfigure/wolverine-kfigure-2.jpg",
+        "assets/products/wolverine-kfigure/wolverine-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50641305",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50641268",
+      "source": "shopier",
+      "active": true,
+      "slug": "thor-kfigure",
+      "date_synced": "2026-09-17T13:56:02.545Z",
+      "title": "Thor Kfigure",
+      "description": "Gök Gürültüsü Tanrısı Kfigure formunda. Thor’un efsanevi zırhı ve çekiciyle Marvel’ın en tanınan kahramanlarından birini koleksiyonunuza taşıyın. Thor Kfigure Boyama Seti – 9,2 cm",
+      "price": "500.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/thor-kfigure/thor-kfigure-1.jpg",
+        "assets/products/thor-kfigure/thor-kfigure-2.jpg",
+        "assets/products/thor-kfigure/thor-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50641268",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50641262",
+      "source": "shopier",
+      "active": true,
+      "slug": "spider-man-kfigure",
+      "date_synced": "2026-09-17T13:56:02.545Z",
+      "title": "Spider-Man Kfigure",
+      "description": "Mahallenizin dost canlısı kahramanı Spider-Man, Kfigure olarak yeniden tasarlandı. İkonik kırmızı-mavi kostümü ve örümcek tasarımıyla Spider-Man’i koleksiyonunuza ekleyin. Spider-Man Kfigure Boyama Seti – 9,2 cm",
+      "price": "500.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/spider-man-kfigure/spider-man-kfigure-1.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50641262",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50641260",
+      "source": "shopier",
+      "active": true,
+      "slug": "mr-fantastic-kfigure",
+      "date_synced": "2026-09-17T13:56:02.545Z",
+      "title": "Mr. Fantastic Kfigure",
+      "description": "Fantastic Four’un dahi lideri Kfigure olarak yeniden tasarlandı. Reed Richards’ın klasik mavi kostümü ve kendine özgü Fantastic Four tasarımıyla koleksiyonun dikkat çeken parçalarından biri. Mr Fantastic Kfigure Boyama Seti – 9,2 cm",
+      "price": "500.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/mr-fantastic-kfigure/mr-fantastic-kfigure-1.jpg",
+        "assets/products/mr-fantastic-kfigure/mr-fantastic-kfigure-2.jpg",
+        "assets/products/mr-fantastic-kfigure/mr-fantastic-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50641260",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50641256",
+      "source": "shopier",
+      "active": true,
+      "slug": "magneto-kfigure",
+      "date_synced": "2026-09-17T13:56:02.546Z",
+      "title": "Magneto Kfigure",
+      "description": "Manyetizmanın Ustası Kfigure olarak yeniden tasarlandı. İkonik miğferi, zırhı ve kendine özgü güçlü duruşuyla Magneto, her Marvel koleksiyonunda öne çıkan bir parça. Magneto Kfigure Boyama Seti – 9,2 cm",
+      "price": "500.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/magneto-kfigure/magneto-kfigure-1.jpg",
+        "assets/products/magneto-kfigure/magneto-kfigure-2.jpg",
+        "assets/products/magneto-kfigure/magneto-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50641256",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50641254",
+      "source": "shopier",
+      "active": true,
+      "slug": "iron-man-kfigure",
+      "date_synced": "2026-09-17T13:56:02.546Z",
+      "title": "Iron Man Kfigure",
+      "description": "Tony Stark’ın efsanevi zırhı Kfigure olarak yeniden tasarlandı. Kendine özgü Iron Man tasarımı ve futuristik zırh görünümüyle koleksiyonunuza güçlü bir parça ekleyin. Iron Man Kfigure Boyama Seti – 9,2 cm",
+      "price": "500.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/iron-man-kfigure/iron-man-kfigure-1.jpg",
+        "assets/products/iron-man-kfigure/iron-man-kfigure-2.jpg",
+        "assets/products/iron-man-kfigure/iron-man-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50641254",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50641253",
+      "source": "shopier",
+      "active": true,
+      "slug": "deadpool-kfigure",
+      "date_synced": "2026-09-17T13:56:02.546Z",
+      "title": "Deadpool Kfigure",
+      "description": "Ağzı bozuk paralı asker Kfigure’a dönüştü. Kendine özgü kırmızı-siyah kostümü ve kaotik karakteriyle Deadpool, koleksiyonunuza farklı bir enerji katıyor. Deadpool Kfigure Boyama Seti – 9,2 cm",
+      "price": "500.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/deadpool-kfigure/deadpool-kfigure-1.jpg",
+        "assets/products/deadpool-kfigure/deadpool-kfigure-2.jpg",
+        "assets/products/deadpool-kfigure/deadpool-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50641253",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50641249",
+      "source": "shopier",
+      "active": true,
+      "slug": "doctor-doom-kfigure",
+      "date_synced": "2026-09-17T13:56:02.546Z",
+      "title": "Doctor Doom Kfigure",
+      "description": "Latveria’nın hükümdarı Kfigure olarak yeniden tasarlandı. Doctor Doom’un ikonik zırhı, maskesi ve güçlü duruşu, onu her Marvel koleksiyonunun dikkat çekici parçalarından biri haline getiriyor. Doctor Doom Kfigure Boyama Seti – 9,2 cm",
+      "price": "500.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/doctor-doom-kfigure/doctor-doom-kfigure-1.jpg",
+        "assets/products/doctor-doom-kfigure/doctor-doom-kfigure-2.jpg",
+        "assets/products/doctor-doom-kfigure/doctor-doom-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50641249",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50641240",
+      "source": "shopier",
+      "active": true,
+      "slug": "cyclops-kfigure",
+      "date_synced": "2026-09-17T13:56:02.547Z",
+      "title": "Cyclops Kfigure",
+      "description": "X-Men’in saha lideri Kfigure formunda. Cyclops’un ikonik vizörü ve klasik X-Men görünümü, Marvel’ın en tanınan mutantlarından birinin disiplinli ve güçlü duruşunu yansıtıyor. Cyclops Kfigure Boyama Seti – 9,2 cm",
+      "price": "500.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/cyclops-kfigure/cyclops-kfigure-1.jpg",
+        "assets/products/cyclops-kfigure/cyclops-kfigure-2.jpg",
+        "assets/products/cyclops-kfigure/cyclops-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50641240",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "50641233",
+      "source": "shopier",
+      "active": true,
+      "slug": "captain-america-kfigure",
+      "date_synced": "2026-09-17T13:56:02.547Z",
+      "title": "Captain America Kfigure",
+      "description": "Süper askerin sembolü Kfigure olarak yeniden tasarlandı. Captain America’nın ikonik kostümü, kalkanı ve kahraman duruşu bu koleksiyonluk figürde bir araya geliyor. Captain America Kfigure Boyama Seti – 9,2 cm",
+      "price": "500.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/captain-america-kfigure/captain-america-kfigure-1.jpg",
+        "assets/products/captain-america-kfigure/captain-america-kfigure-2.jpg",
+        "assets/products/captain-america-kfigure/captain-america-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/kfigure/50641233",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
+      "shopier_id": "manual_the_weeknd",
+      "source": "manual",
+      "active": true,
+      "title": "The Weeknd",
+      "slug": "the-weeknd",
+      "description": "Custom 3D-printed figure of The Weeknd",
+      "price": null,
+      "currency": "TRY",
+      "images": [
+        "assets/images/figure1.png"
+      ],
+      "shopier_url": null,
+      "stock_status": "inStock",
+      "categories": [],
+      "date_synced": null
+    },
+    {
+      "shopier_id": "manual_v1_ultrakill",
+      "source": "manual",
+      "active": true,
+      "title": "V1 from Ultrakill",
+      "slug": "v1-from-ultrakill",
+      "description": "Custom 3D-printed figure of V1 from Ultrakill",
+      "price": null,
+      "currency": "TRY",
+      "images": [
+        "assets/images/figure2.png"
+      ],
+      "shopier_url": null,
+      "stock_status": "inStock",
+      "categories": [],
+      "date_synced": null
+    },
+    {
+      "shopier_id": "manual_custom_character",
+      "source": "manual",
+      "active": true,
+      "title": "Custom Character",
+      "slug": "custom-character",
+      "description": "A fully custom character figure",
+      "price": null,
+      "currency": "TRY",
+      "images": [
+        "assets/images/figure3.png"
+      ],
+      "shopier_url": null,
+      "stock_status": "inStock",
+      "categories": [],
+      "date_synced": null
+    },
+    {
+      "shopier_id": "manual_billie_eilish",
+      "source": "manual",
+      "active": true,
+      "title": "Billie Eilish",
+      "slug": "billie-eilish",
+      "description": "Custom 3D-printed figure of Billie Eilish",
+      "price": null,
+      "currency": "TRY",
+      "images": [
+        "assets/images/figure4.png"
+      ],
+      "shopier_url": null,
+      "stock_status": "inStock",
+      "categories": [],
+      "date_synced": null
+    }
+  ],
+  "last_sync": "2026-09-17T13:56:02.547Z",
+  "sync_version": 1
+}
