@@ -78,8 +78,8 @@ function renderProducts(products) {
         ${product.stock_status === 'outOfStock' ? '<div class="out-of-stock-overlay" data-i18n="product.outofstock">Out of Stock</div>' : ''}
       </a>
       <div class="gallery-caption">
-        <h3><a href="${itemUrl}" style="text-decoration:none; color:inherit;">${product.title}</a></h3>
-        <p class="product-description">${product.description ? product.description.replace(/<[^>]+>/g, '') : ''}</p>
+        <h3><a href="${itemUrl}" style="text-decoration:none; color:inherit;" data-i18n="product.title.${product.slug}">${product.title}</a></h3>
+        <p class="product-description" data-i18n="product.desc.${product.slug}.plain">${product.description ? product.description.replace(/<[^>]+>/g, '') : ''}</p>
         <div class="product-footer">
           ${priceHtml}
           ${actionHtml}
