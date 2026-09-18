@@ -6,6 +6,7 @@
 /* ── Variables ─────────────────────────────────────────────── */
 :root {
   /* Colors */
+  --header-height: 80px;
   --black:       #000000;
   --off-black:   #080808;
   --surface:     #0a0a0a;
