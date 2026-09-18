@@ -79,7 +79,7 @@ function renderProducts(products) {
       </a>
       <div class="gallery-caption">
         <h3><a href="${itemUrl}" style="text-decoration:none; color:inherit;">${product.title}</a></h3>
-        <p class="product-description">${product.description || ''}</p>
+        <p class="product-description">${product.description ? product.description.replace(/<[^>]+>/g, '') : ''}</p>
         <div class="product-footer">
           ${priceHtml}
           ${actionHtml}

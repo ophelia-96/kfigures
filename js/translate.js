@@ -96,6 +96,12 @@
       'about.f1.title': 'Devil\'s Hand', 'about.f1.body': 'A story-driven card game about a man trapped in debt and hunted by forces that aren\'t quite human. The game weaves narrative and card mechanics together — every hand you play moves the story forward, and the story decides the stakes of the next hand.',
       'about.f2.title': 'Python Personal Assistant — v2', 'about.f2.body': 'An overhaul of the existing assistant system: smarter voice command recognition, a wider set of actions it can perform, and a more polished overall experience — turning a working prototype into something genuinely usable every day.',
       'about.cta.label': 'Get in touch', 'about.cta.title': 'Let\'s build<br><em>something.</em>', 'about.cta.button': 'See the Collection',
+      'item.buy': 'Buy Now',
+      'item.inquire': 'Inquire',
+      'item.info': 'You can upload a file to customize your order after completing the payment for this product.',
+      'item.tab.desc': 'Product Description',
+      'item.tab.delivery': 'Delivery Info',
+      'item.delivery.text': 'Your order will be shipped within 5-7 business days. Shipping time may vary depending on the product due to custom production and painting processes.'
     },
     tr: {
       'nav.home': 'Ana Sayfa', 'nav.product': 'Ürünler', 'nav.process': 'Süreç', 'nav.about': 'Hakkımda',
@@ -188,6 +194,12 @@
       'about.f1.title': 'Devil\'s Hand', 'about.f1.body': 'Borç bataklığına saplanmış, pek de insana benzemeyen güçlerin peşine düştüğü bi adam hakkında hikaye odaklı kart oyunu. Oynadığın her el hikayeyi ilerletiyor, hikaye de bi sonraki elin riskini belirliyor.',
       'about.f2.title': 'Python Kişisel Asistan — v2', 'about.f2.body': 'Asistan sisteminin baştan sona yenilenmesi: daha akıllı ses tanıma, yapabileceği şeyler genişliyor, genel deneyim çok daha düzgün — çalışan bi prototipi her gün rahatça kullanılacak bi şeye çeviriyoruz.',
       'about.cta.label': 'İletişime geç', 'about.cta.title': 'Hadi bi şeyler<br><em>yapalım.</em>', 'about.cta.button': 'Koleksiyona Bak',
+      'item.buy': 'Hemen Al',
+      'item.inquire': 'Detay Al',
+      'item.info': 'Bu üründe, ödemeyi tamamladıktan sonra siparişinizi özelleştirmek için dosya yükleyebilirsiniz.',
+      'item.tab.desc': 'Ürün açıklaması',
+      'item.tab.delivery': 'Teslimat bilgisi',
+      'item.delivery.text': 'Siparişiniz 5-7 iş günü içerisinde kargoya teslim edilmektedir. Özel üretim ve boyama süreçlerinden dolayı kargolama süresi ürüne göre değişiklik gösterebilir.'
     }
   };
 
