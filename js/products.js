@@ -71,13 +71,14 @@ function renderProducts(products) {
     }
     
     // Build card HTML
+    const itemUrl = `item/${product.slug}.html`;
     card.innerHTML = `
-      <div class="product-image-container">
+      <a href="${itemUrl}" class="product-image-container" style="display:block;">
         ${hasImage ? `<img src="${imageUrl}" alt="${product.title}" loading="lazy">` : '<div class="no-image-placeholder mono">NO IMAGE</div>'}
         ${product.stock_status === 'outOfStock' ? '<div class="out-of-stock-overlay" data-i18n="product.outofstock">Out of Stock</div>' : ''}
-      </div>
+      </a>
       <div class="gallery-caption">
-        <h3>${product.title}</h3>
+        <h3><a href="${itemUrl}" style="text-decoration:none; color:inherit;">${product.title}</a></h3>
         <p class="product-description">${product.description || ''}</p>
         <div class="product-footer">
           ${priceHtml}
