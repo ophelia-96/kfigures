@@ -287,8 +287,8 @@
     const dict = TRANSLATIONS[lang];
     if (!dict) return;
 
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
+    document.querySelectorAll('[data-i18n], [data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n') || el.getAttribute('data-i18n-html');
       if (dict[key] !== undefined) {
         if (el.hasAttribute('data-i18n-html')) {
           el.innerHTML = dict[key];
