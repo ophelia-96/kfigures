@@ -125,7 +125,7 @@
       'spec.title': 'Ömür boyu<br><em>dayanır.</em>',
       'spec.desc': 'Fabrika işi değil. Çin malı değil. Her figür stüdyoda teker teker üretilir, elle bitirilir, sağlam olsun diye yapılır.',
       'spec.material': 'Malzeme', 'spec.material.val': 'PLA filament',
-      'spec.finish': 'Son Kat', 'spec.finish.val': 'Elle boyanmış, UV ile kaplanmış',
+      'spec.finish': 'Son Kat', 'spec.finish.val': 'Elle boyanmış.',
       'spec.edition': 'Üretim', 'spec.edition.val': 'Tek adet — sadece senin',
       'spec.packaging': 'Paket', 'spec.packaging.val': 'Kaliteli vitrin kutusu',
       'gallery.label': '004.5 / GALERİ', 'gallery.title': 'Yaptıklarımız',
