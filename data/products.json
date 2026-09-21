@@ -1,6 +1,23 @@
 {
   "products": [
     {
+      "shopier_id": "51062682",
+      "source": "shopier",
+      "active": true,
+      "slug": "musgang",
+      "date_synced": "2026-09-21T09:07:22.291Z",
+      "title": "musgang",
+      "description": "",
+      "price": "150.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/musgang/musgang-1.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/51062682",
+      "stock_status": "inStock",
+      "categories": []
+    },
+    {
       "shopier_id": "51061804",
       "source": "shopier",
       "active": true,
@@ -291,6 +308,6 @@
       ]
     }
   ],
-  "last_sync": "2026-09-21T09:06:07.481Z",
+  "last_sync": "2026-09-21T09:07:22.293Z",
   "sync_version": 1
 }

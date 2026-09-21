@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>musgang | KFIGURES</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header" id="header">
+  <nav class="nav">
+    <a href="../index.html" class="logo">KFIGURES</a>
+    <ul class="nav-links">
+      <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+      <li>
+        <button class="lang-toggle" id="langToggle" onclick="kfToggleLang()" aria-label="Toggle Language"></button>
+      </li>
+      <li><a href="../product.html" class="nav-link active" data-i18n="nav.product">Product</a></li>
+      <li><a href="../process.html" class="nav-link" data-i18n="nav.process">Process</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="../index.html" class="mobile-link" data-i18n="nav.home">Home</a></li>
+    <li><a href="../product.html" class="mobile-link" data-i18n="nav.product">Product</a></li>
+    <li><a href="../process.html" class="mobile-link" data-i18n="nav.process">Process</a></li>
+    <li><button class="lang-toggle mobile-lang-toggle" id="langToggleMobile" onclick="kfToggleLang()" aria-label="Toggle Language"></button></li>
+  </ul>
+</div>
+
+<main>
+  <section class="item-section">
+    <div class="container">
+      <div class="item-layout">
+        <!-- Left: Images -->
+        <div class="item-gallery reveal-up">
+          <div class="item-main-image">
+            <img src="../assets/products/musgang/musgang-1.jpg" alt="musgang" id="mainItemImage">
+          </div>
+          <div class="item-thumbnails">
+            
+          </div>
+        </div>
+        
+        <!-- Right: Details -->
+        <div class="item-details reveal-up" style="--delay: 0.2s">
+          <h1 class="item-title" data-i18n="product.title.musgang">musgang</h1>
+          <div class="item-price mono">150.00 TRY</div>
+          
+          <div class="item-actions">
+            <a href="https://www.shopier.com/51062682" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:flex;"><span data-i18n="item.buy">Hemen Al</span></a>
+          </div>
+          
+          <div class="item-info-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <p data-i18n="item.info">Bu üründe, ödemeyi tamamladıktan sonra siparişinizi özelleştirmek için dosya yükleyebilirsiniz.</p>
+          </div>
+          
+          <div class="item-tabs">
+            <div class="tab-headers">
+              <button class="tab-btn active" onclick="switchTab('desc')" data-i18n="item.tab.desc">Ürün açıklaması</button>
+              <button class="tab-btn" onclick="switchTab('delivery')" data-i18n="item.tab.delivery">Teslimat bilgisi</button>
+            </div>
+            <div class="tab-content" id="tab-desc">
+              <div data-i18n-html="product.desc.musgang"></div>
+            </div>
+            <div class="tab-content hidden" id="tab-delivery">
+              <p data-i18n="item.delivery.text">Siparişiniz 5-7 iş günü içerisinde kargoya teslim edilmektedir. Özel üretim ve boyama süreçlerinden dolayı kargolama süresi ürüne göre değişiklik gösterebilir.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-logo">KFIGURES</div>
+      <p class="footer-tag mono" data-i18n="footer.tag">not a toy. an icon.</p>
+      <p class="footer-copy mono" data-i18n="footer.copy">© 2025 KFIGURES. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+<script src="../js/translate.js"></script>
+<script>
+  // Thumbnail click handler
+  function setMainImage(url, el) {
+    document.getElementById('mainItemImage').src = url;
+    document.querySelectorAll('.thumbnail-img').forEach(img => img.classList.remove('active'));
+    el.classList.add('active');
+  }
+  
+  // Tab click handler
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('tab-' + tabId).classList.remove('hidden');
+    event.currentTarget.classList.add('active');
+  }
+</script>
+</body>
+</html>
