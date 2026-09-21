@@ -5,9 +5,9 @@
       "source": "shopier",
       "active": true,
       "slug": "musgang",
-      "date_synced": "2026-09-21T09:07:22.291Z",
+      "date_synced": "2026-09-21T09:08:01.945Z",
       "title": "musgang",
-      "description": "",
+      "description": "Mustang araba satıştadır.",
       "price": "150.00",
       "currency": "TRY",
       "images": [
@@ -308,6 +308,6 @@
       ]
     }
   ],
-  "last_sync": "2026-09-21T09:07:22.293Z",
+  "last_sync": "2026-09-21T09:08:01.945Z",
   "sync_version": 1
 }
