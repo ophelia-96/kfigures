@@ -1,6 +1,27 @@
 {
   "products": [
     {
+      "shopier_id": "51061804",
+      "source": "shopier",
+      "active": true,
+      "slug": "aralar-iin-zel-tasarm-kfigure",
+      "date_synced": "2026-09-21T08:21:38.345Z",
+      "title": "Araçlar İçin Özel Tasarım Kfigure",
+      "description": "<p><strong>Araçlar İçin Özel Tasarım Kfigure</strong></p>\r\n\r\n<p>Sevdiğiniz, kullandığınız veya sizin için özel anlam taşıyan aracı koleksiyonluk bir Kfigure’a dönüştürün. Aracınızın net bir fotoğrafını gönderin, biz de aracın <strong>tasarımını, rengini ve karakteristik detaylarını</strong> Kfigures’ın kendine özgü tarzında özel bir figüre dönüştürelim.</p>\r\n\r\n<p>Arabanız, motosikletiniz veya sizin için özel olan başka bir aracı, size ait benzersiz bir Kfigure ile koleksiyonunuza taşıyın.<br>\r\n </p>\r\n\r\n<p><strong>Paket İçeriği</strong></p>\r\n\r\n<p> </p>\r\n\r\n<ul>\r\n\t<li>\r\n\t<p><strong>Boyalar:</strong> Görsellerdeki aynı renklerde, 6 ml boya tüplerinde hazırlanır.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>1 adet geniş yüzeyler için boyama fırçası</strong></p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Figürün boyama şablonu</strong></p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Güvenli paketleme:</strong> Kırılmalara karşı kırpıntı kağıt ile özenle paketlenir.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>(Hazır boyalı seçeneği işaretlendiğinde paket içinde boya ve fırça bulunmaz.)</p>\r\n\t</li>\r\n</ul>\r\n\r\n<p> </p>\r\n\r\n<p><strong>Üretim ve Kargolama</strong></p>\r\n\r\n<p> </p>\r\n\r\n<ul>\r\n\t<li>\r\n\t<p>Figürler makine üretimi olduğu için hazırlanma süreci <strong>en geç 2 gün</strong> sürebilir.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p>Siparişiniz hazırlandıktan sonra <strong>1–3 iş günü içerisinde</strong> teslim edilir.</p>\r\n\t</li>\r\n</ul>\r\n",
+      "price": "400.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/aralar-iin-zel-tasarm-kfigure/aralar-iin-zel-tasarm-kfigure-1.jpg",
+        "assets/products/aralar-iin-zel-tasarm-kfigure/aralar-iin-zel-tasarm-kfigure-2.jpg",
+        "assets/products/aralar-iin-zel-tasarm-kfigure/aralar-iin-zel-tasarm-kfigure-3.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/51061804",
+      "stock_status": "inStock",
+      "categories": [
+        "Özel Tasarım Kfigürler"
+      ]
+    },
+    {
       "shopier_id": "50891730",
       "source": "shopier",
       "active": true,
@@ -270,6 +291,6 @@
       ]
     }
   ],
-  "last_sync": "2026-09-18T07:56:36.313Z",
+  "last_sync": "2026-09-21T08:21:38.346Z",
   "sync_version": 1
 }
