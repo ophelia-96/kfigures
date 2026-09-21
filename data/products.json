@@ -1,23 +1,6 @@
 {
   "products": [
     {
-      "shopier_id": "51062682",
-      "source": "shopier",
-      "active": true,
-      "slug": "musgang",
-      "date_synced": "2026-09-21T09:10:50.807Z",
-      "title": "musgang",
-      "description": "Mustang araba satıştadır.",
-      "price": "150.00",
-      "currency": "TRY",
-      "images": [
-        "assets/products/musgang/musgang-1.jpg"
-      ],
-      "shopier_url": "https://www.shopier.com/51062682",
-      "stock_status": "inStock",
-      "categories": []
-    },
-    {
       "shopier_id": "51061804",
       "source": "shopier",
       "active": true,
@@ -306,8 +289,25 @@
       "categories": [
         "Marvel Kfigürler"
       ]
+    },
+    {
+      "shopier_id": "51062682",
+      "source": "shopier",
+      "active": false,
+      "slug": "musgang",
+      "date_synced": "2026-09-21T09:10:50.807Z",
+      "title": "musgang",
+      "description": "Mustang araba satıştadır.",
+      "price": "150.00",
+      "currency": "TRY",
+      "images": [
+        "assets/products/musgang/musgang-1.jpg"
+      ],
+      "shopier_url": "https://www.shopier.com/51062682",
+      "stock_status": "inStock",
+      "categories": []
     }
   ],
-  "last_sync": "2026-09-21T09:11:22.554Z",
+  "last_sync": "2026-09-21T09:11:54.941Z",
   "sync_version": 1
 }
