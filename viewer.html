@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Viewer | KFIGURES</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0b0b0b;
+      overflow: hidden;
+      font-family: 'Space Mono', monospace;
+    }
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      --poster-color: transparent;
+      outline: none;
+    }
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+    .error-msg {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+    .loader {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <a href="javascript:history.back()" class="back-btn">← Back</a>
+  <div id="errorMsg" class="error-msg">3D model not available yet.</div>
+  <div id="loader" class="loader">Loading 3D Model...</div>
+  <model-viewer id="viewer" 
+                alt="3D Model" 
+                auto-rotate 
+                camera-controls 
+                shadow-intensity="1">
+  </model-viewer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const modelFile = params.get('model');
+      
+      const viewer = document.getElementById('viewer');
+      const errorMsg = document.getElementById('errorMsg');
+      const loader = document.getElementById('loader');
+      
+      if (modelFile) {
+        // Show loader while model is preparing
+        loader.style.display = 'block';
+        
+        viewer.src = `assets/3d-models/figures/${modelFile}.glb`;
+        
+        viewer.addEventListener('load', () => {
+          loader.style.display = 'none';
+        });
+
+        viewer.addEventListener('error', (error) => {
+          console.log('Error loading model:', error);
+          loader.style.display = 'none';
+          errorMsg.style.display = 'block';
+          viewer.style.display = 'none';
+        });
+      } else {
+        errorMsg.style.display = 'block';
+        viewer.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
